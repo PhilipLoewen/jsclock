@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+ <title>JavaScript Clock</title>
+ 
+ <script type="text/javascript">
+ <!--
+
+ var lineheightmin = 1.1;
+   
+ function twoDigits(n) {
+   var retString = n;
+   if (n<10) {
+     retString = "0"+retString;
+     }
+   return retString;
+   }
+   
+ function update() {
+   var now = new Date();
+   hh = twoDigits(now.getHours());
+   mm = twoDigits(now.getMinutes());
+   ss = twoDigits(now.getSeconds());
+   hhmmss = hh+":"+mm+":"+ss;
+   document.getElementById("timepar").firstChild.data  = hhmmss;
+
+   /* Set font size and line height */
+   var width = window.innerWidth;
+   var height = window.innerHeight;
+   fs1 = (height/lineheightmin)/16;
+   fs2 = 0.666 * width/56;
+   fs  = fs1; if (fs2<fs) {fs = fs2;}
+   document.getElementById("timepar").style.fontSize = fs+"em";
+   document.getElementById("timepar").style.lineHeight = (height - 2)+"px";
+   }
+    
+ // -->
+ </script>
+</head>
+
+<body style="margin: 0px; background: #FFFF00;" onload='window.setInterval("update();",200)'>
+
+<p id="timepar" style="text-align: center; margin: 0px; padding: 0px;
+font-size: 30px; font-weight: bold;">
+JavaScript Time by Philip D Loewen, 2011-08-30
+</p>
+
+</body>
+</html>
+
