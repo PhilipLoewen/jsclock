@@ -1,13 +1,21 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html lang="en">
 
 <head>
- <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  <title>JavaScript Clock</title>
- 
- <script type="text/javascript">
+ <style>
+ body {
+  margin: 0px; 
+  background-color: #FFFF00;
+  background-image: url('fields.jpg');
+  background-size: cover;
+  color: #CCFFAA;
+ }
+ </style>
+  
+ <script>
  <!--
 
  var lineheightmin = 1.1;
@@ -42,13 +50,12 @@
  </script>
 </head>
 
-<body style="margin: 0px; background: #FFFF00;" onload='window.setInterval("update();",200)'>
+<body onload='window.setInterval("update();",200)'>
 
 <p id="timepar" style="text-align: center; margin: 0px; padding: 0px;
 font-size: 30px; font-weight: bold;">
-JavaScript Time by Philip D Loewen, 2011-08-30
+JavaScript Time by Philip D Loewen, updated 2024-07-09
 </p>
 
 </body>
 </html>
-
